@@ -1,5 +1,42 @@
 # React + TypeScript + Vite
 
+### Create React Project with Vite 
+it will let you chose TypeScript / JavaScript
+```
+npm create vite@latest
+cd [folder]
+npm install
+npm run dev
+```
+
+### Install Tailwind
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+update tailwind.config.css as following
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+add in index.css
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
