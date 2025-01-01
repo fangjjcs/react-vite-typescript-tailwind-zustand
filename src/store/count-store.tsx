@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { CountState } from "../types/store";
+import { CountState } from "@/types/store";
 
 export const useCountStore = create<CountState>()((set) => ({
   count: 0,

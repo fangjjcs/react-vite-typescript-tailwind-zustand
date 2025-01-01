@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { NumberState } from "../types/store";
+import { NumberState } from "@/types/store";
 
 export const useNumberStore = create<NumberState>()((set) => ({
   number: 0,

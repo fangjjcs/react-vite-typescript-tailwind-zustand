@@ -9,3 +9,15 @@ export interface NumberState {
     increase: (by: number) => void;
     resetNumber: () => void;
 }
+
+type Data = {
+    id: string;
+    full_name: string;
+    html_url: string;
+};
+  
+export interface DataState {
+    data: Data[];
+    isLoading: boolean;
+    getData: (query: string) => void;
+}

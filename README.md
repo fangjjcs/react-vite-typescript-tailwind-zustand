@@ -36,6 +36,26 @@ add in index.css
 @tailwind utilities;
 ```
 
+Install Zustand
+```
+npm install zustans
+```
+Install React-Query
+
+```
+npm install @tanstack/react-query
+npm install @tanstack/react-query-devtools
+npm install -D @tanstack/eslint-plugin-query
+```
+
+add this line in eslint.config.js
+```
+extends: [
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+]
+```
+
+<br>
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
