@@ -4,17 +4,17 @@ import { DataState } from "@/types/store";
 export const useDataStore = create<DataState>()((set, get) => ({
   data: [],
   isLoading: false,
-  getData: async (query) => {
+  getData: async () => {
     
     set({ isLoading: true, data: [] });
     console.log("get", get());
 
     const res = await fetch(
-      `https://api.github.com/search/repositories?q=${query}`
+      `http://localhost:3030/treatments`
     );
     const data = await res.json();
 
-    set({ isLoading: false, data: data.items });
+    set({ isLoading: false, data: data });
     console.log("get", get());
     
   },

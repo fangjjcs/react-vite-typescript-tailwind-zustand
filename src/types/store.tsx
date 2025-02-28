@@ -1,7 +1,11 @@
+import { Treatment } from "./treatment";
+
 export interface CountState {
     count: number;
+    treatmentNum: Number;
     increase: (by: number) => void;
     resetCount: () => void;
+    setTreatment: (data: Treatment[]) => void;
 }
 
 export interface NumberState {
@@ -12,12 +16,12 @@ export interface NumberState {
 
 type Data = {
     id: string;
-    full_name: string;
-    html_url: string;
+    name: string;
+    description: string;
 };
   
 export interface DataState {
     data: Data[];
     isLoading: boolean;
-    getData: (query: string) => void;
+    getData: () => void;
 }
