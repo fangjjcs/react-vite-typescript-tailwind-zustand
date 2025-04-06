@@ -18,7 +18,7 @@ contentView: {
 selectedGroup: {
 	name: "",
 	fab: "",
-	tool: ""
+	toolModule: ""
 },
 signoffType: "eform"
 ```
@@ -64,7 +64,7 @@ type ToolModule {
 | view | smpType | dcGroup | defenseGroup |
 | --- | --- | --- | --- |
 | tab | overall,mainframe,processGroup,recipeList | dcGroup,transformation | dc,window,spec,simulation |
-| level |  | group,fab,tool | group,fab,tool |
+| level |  | group,fab,toolModule | group,fab,toolModule |
 
 底下示範分別點擊樹狀結構的不同物件，setContentView 要帶入什麼值(關聯 default 帶出的畫面)
 
@@ -75,10 +75,24 @@ type ToolModule {
 | Process Group | smpType | processGroup | null |
 | DC Group (group level) | dcGroup | dcGroup | group |
 | DC Group (fab level) | dcGroup | dcGroup | fab |
-| DC Group (tool level) | dcGroup | dcGroup | tool |
+| DC Group (tool level) | dcGroup | dcGroup | toolModule |
 | Defense Group (group level) | defenseGroup | dc | group |
 | Defense Group (fab level) | defenseGroup | spec | fab |
-| Defense Group (tool level) | defenseGroup | spec | tool |
+| Defense Group (tool level) | defenseGroup | spec | toolModule |
+
+底下示範分別點擊樹狀結構的不同物件，setSelectedGroup 要帶入什麼值
+
+| main control on click item | name | fab | toolModule |
+| --- | --- | --- | --- |
+| SMP Type | {SMP Type} | null | null |
+| Mainframe | Mainframe | null | null |
+| Process Group | {Process Group} | null | null |
+| DC Group | {DC Group} | null | null |
+| DC Group (FAB12) | {DC Group} | FAB12 | null |
+| DC Group (FAB12 > ToolA-CH1) | {DC Group} | FAB12 | ToolA-CH1 |
+| Defense Group | {Defense Group} | null | null |
+| Defense Group (FAB20) | {Defense Group} | FAB20 | null |
+| Defense Group (FAB20 > ToolB-CH1) | {Defense Group} | FAB20 | ToolB-CH1 |
 
 API interface
 
