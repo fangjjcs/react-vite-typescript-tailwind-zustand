@@ -63,19 +63,8 @@ type ToolModule {
 
 | view | smpType | dcGroup | defenseGroup |
 | --- | --- | --- | --- |
-| tab | overall 
-mainframe
-processGroup
-recipeList  | dcGroup
-transformation | dc
-window
-spec
-simulation |
-| level |  | group
-fab
-tool | group
-fab
-tool |
+| tab | overall,mainframe,processGroup,recipeList | dcGroup,transformation | dc,window,spec,simulation |
+| level |  | group,fab,tool | group,fab,tool |
 
 底下示範分別點擊樹狀結構的不同物件，setContentView 要帶入什麼值(關聯 default 帶出的畫面)
 
